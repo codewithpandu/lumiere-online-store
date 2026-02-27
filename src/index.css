@@ -1,0 +1,12 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Playfair:ital,opsz,wght@0,5..1200,300..900;1,5..1200,300..900&display=swap");
+@import "tailwindcss";
+
+:root {
+  font-family: "Playfair", serif;
+}
+
+@theme {
+  --color-primary: #f6f2ee;
+  --color-secondary: #f9f7f4;
+  --color-my-brown: #594026;
+}
