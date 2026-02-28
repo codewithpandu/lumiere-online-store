@@ -48,7 +48,7 @@ const Header = () => {
               </ul>
             </nav>
             <div className="flex md:justify-center">
-              <button className="relative text-(--color-my-brown) group font-semibold ">
+              <button className="relative cursor-pointer text-(--color-my-brown) group font-semibold ">
                 <FaShoppingCart />
               </button>
             </div>
