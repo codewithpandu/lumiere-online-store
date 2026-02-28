@@ -4,12 +4,9 @@ import { Link } from "react-router-dom";
 const Navlink = ({ name, url }) => {
   return (
     <li>
-      <Link
-        to={url}
-        className="relative text-(--color-my-brown) group font-semibold "
-      >
+      <Link to={url} className="relative text-my-brown group font-semibold ">
         {name}
-        <span className="absolute -bottom-1/2 left-1/2 w-0 group-hover:w-full group-hover:left-0 h-1 bg-(--color-my-brown) transition-all duration-300"></span>
+        <span className="absolute -bottom-1/2 left-1/2 w-0 group-hover:w-full group-hover:left-0 h-1 bg-my-brown transition-all duration-300 hidden md:block"></span>
       </Link>
     </li>
   );
