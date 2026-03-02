@@ -7,7 +7,7 @@ const Hero = () => {
     <section className="bg-primary w-full p-4">
       <div className="w-full lg:max-w-7xl grid sm:grid-cols-1 md:grid-cols-2 m-auto py-24 md:py-32 gap-8">
         <div>
-          <span className="text-sm text-(--color-my-brown) bg-taupe-200 px-4 py-2 rounded-full">
+          <span className="text-sm text-my-brown font-sans bg-taupe-200 px-4 py-2 rounded-full">
             ● Koleksi Terbaru 2026
           </span>
           <h3 className="text-5xl md:text-7xl mt-4 font-extrabold">
