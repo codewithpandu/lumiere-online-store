@@ -54,7 +54,7 @@ const contactMenuLink = [
   {
     path: "#",
     icon: <MdOutlinePlace />,
-    name: "Chat Pemesanan",
+    name: "Jl. Fashion Boulevard No. 123, Jakarta Selatan, 12345",
   },
   {
     path: "#",
@@ -70,8 +70,8 @@ const contactMenuLink = [
 
 const Footer = () => {
   return (
-    <footer className="bg-secondary p-4 text-my-brown">
-      <div className="py-20 grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-8 w-full md:max-w-7xl m-auto">
+    <footer className="bg-my-brown p-4 text-secondary">
+      <div className="py-20 grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-8 w-full md:max-w-7xl m-auto">
         <div>
           <h2 className="text-3xl pb-4 font-bold">Lumière</h2>
           <p className="font-sans text-sm">
@@ -115,7 +115,7 @@ const Footer = () => {
               key={index}
               className="font-sans text-sm flex gap-2 items-center py-1"
             >
-              {item.icon} {item.name}
+              <span className="text-lg mb-auto">{item.icon}</span> {item.name}
             </a>
           ))}
         </div>
