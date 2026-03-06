@@ -48,3 +48,15 @@ export const ProductCard = (props) => {
     </div>
   );
 };
+
+export const FeaturedCard = (props) => {
+  const { image, name, description } = props.data;
+
+  return (
+    <div className="flex flex-col bg-white/50 backdrop-blur-md px-4 py-8 justify-center items-center gap-2 rounded-2xl">
+      <span className="text-3xl">{image}</span>
+      <h3 className="font-bold text-lg">{name}</h3>
+      <p className="font-sans text-sm text-center">{description}</p>
+    </div>
+  );
+};

@@ -52,15 +52,15 @@ const listProduct = [
   },
 ];
 
-const FeaturedProduct = () => {
+const Product = () => {
   return (
-    <section className="bg-my-brown text-secondary p-4">
-      <div className="py-20 grid grid-cols-1 md:grid-cols-[1fr_auto] w-full md:max-w-7xl m-auto">
+    <section className="bg-my-brown text-secondary py-20 px-4">
+      <div className="grid grid-cols-1 md:grid-cols-[1fr_auto] w-full md:max-w-7xl m-auto">
         <div>
           <h1 className="text-3xl md:text-5xl font-bold text-center md:text-left">
             Produk Unggulan
           </h1>
-          <p className=" font-sans my-4">
+          <p className="font-sans my-4 text-center md:text-left">
             Pilihan terbaik dari koleksi kami yang paling diminati
           </p>
         </div>
@@ -68,8 +68,7 @@ const FeaturedProduct = () => {
           Lihat Semua Produk
         </button>
       </div>
-      <div className="grid grid-cols-2 lg:grid-cols-3 gap-4 w-full md:max-w-7xl m-auto">
-        {}
+      <div className="grid grid-cols-2 lg:grid-cols-3 gap-4 w-full md:max-w-7xl m-auto pt-8">
         {listProduct.map((item, index) => (
           <ProductCard key={index} data={item} />
         ))}
@@ -78,4 +77,4 @@ const FeaturedProduct = () => {
   );
 };
 
-export default FeaturedProduct;
+export default Product;

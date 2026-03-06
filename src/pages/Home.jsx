@@ -2,7 +2,9 @@ import React from "react";
 import Header from "../components/Header";
 import Hero from "../components/Hero";
 import Category from "../components/Category";
-import FeaturedProduct from "../components/FeaturedProduct";
+import Product from "../components/Product";
+import Featured from "../components/Featured";
+import Footer from "../components/Footer";
 
 const Home = () => {
   return (
@@ -11,7 +13,9 @@ const Home = () => {
       <main>
         <Hero />
         <Category />
-        <FeaturedProduct />
+        <Product />
+        <Featured />
+        <Footer />
       </main>
     </div>
   );
