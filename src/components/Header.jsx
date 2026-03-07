@@ -1,8 +1,11 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import Navlink from "./Navlink";
 import { FaShoppingCart } from "react-icons/fa";
 import Hamburger from "hamburger-react";
+import { useDispatch } from "react-redux";
+import { toggleStatusTab } from "../store/cart";
+import { useSelector } from "react-redux";
 
 const url = [
   {
@@ -10,20 +13,33 @@ const url = [
     name: "Home",
   },
   {
-    path: "/produk",
+    path: "/product",
     name: "Produk",
   },
   {
-    path: "/kategori",
+    path: "/",
     name: "Kategori",
   },
   {
-    path: "/tentang",
+    path: "/",
     name: "Tentang",
   },
 ];
 const Header = () => {
   const [isOpen, setOpen] = useState(false);
+  const carts = useSelector((store) => store.cart.items);
+  const [total, setTotal] = useState(0);
+
+  useEffect(() => {
+    let total = 0;
+    carts.forEach((item) => (total += item.quantity));
+    setTotal(total);
+  }, [carts]);
+
+  const dispatch = useDispatch();
+  const openCart = () => {
+    dispatch(toggleStatusTab());
+  };
   return (
     <header className="fixed w-full z-999 top-0 md:p-4 bg-secondary border-b border-b-my-brown">
       <div className="relative max-w-7xl mx-auto p-4 md:p-0">
@@ -45,8 +61,14 @@ const Header = () => {
               </ul>
             </nav>
             <div className="flex md:justify-center border-t md:border-none pt-4 md:pt-0 -translate-y-1">
-              <button className="relative cursor-pointer py-2 px-2 rounded-lg text-my-brown group font-semibold hover:bg-my-brown hover:text-primary text-2xl md:text-lg">
+              <button
+                className="relative cursor-pointer py-2 px-2 rounded-lg text-my-brown group font-semibold hover:bg-my-brown hover:text-primary text-2xl md:text-2xl"
+                onClick={openCart}
+              >
                 <FaShoppingCart />
+                <div className="absolute w-5 h-5 rounded-full bottom-full right-0 translate-x-2 translate-y-2 text-xl bg-primary group-hover:text-my-brown flex justify-center items-center">
+                  {total}
+                </div>
               </button>
             </div>
           </div>

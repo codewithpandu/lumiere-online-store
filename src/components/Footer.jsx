@@ -84,10 +84,8 @@ const Footer = () => {
           <nav>
             <ul className="flex flex-col gap-1">
               {fastMenuLink.map((item, index) => (
-                <li className="font-sans text-sm ">
-                  <Link to={item.path} key={index}>
-                    {item.name}
-                  </Link>
+                <li key={index} className="font-sans text-sm ">
+                  <Link to={item.path}>{item.name}</Link>
                 </li>
               ))}
             </ul>
@@ -98,10 +96,8 @@ const Footer = () => {
           <nav>
             <ul className="flex flex-col gap-1">
               {customerMenuLink.map((item, index) => (
-                <li className="font-sans text-sm ">
-                  <Link to={item.path} key={index}>
-                    {item.name}
-                  </Link>
+                <li key={index} className="font-sans text-sm ">
+                  <Link to={item.path}>{item.name}</Link>
                 </li>
               ))}
             </ul>

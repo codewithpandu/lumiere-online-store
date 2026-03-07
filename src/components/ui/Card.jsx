@@ -1,6 +1,8 @@
 import React from "react";
 import RupiahCurrency from "../../utils/RupiahCurrency";
 import { PrimaryButton } from "./Button";
+import { useDispatch } from "react-redux";
+import { addToCart } from "../../store/cart";
 
 export const CategoryCard = (props) => {
   const { name, produk, image } = props.data;
@@ -22,7 +24,12 @@ export const CategoryCard = (props) => {
 };
 
 export const ProductCard = (props) => {
-  const { name, image, price, rating, review } = props.data;
+  const { id, name, image, price, rating, review } = props.data;
+
+  const dispatch = useDispatch();
+  const handleAddToCart = () => {
+    dispatch(addToCart({ productId: id, quantity: 1 }));
+  };
 
   return (
     <div className="relative w-full rounded-2xl overflow-hidden group">
@@ -40,7 +47,10 @@ export const ProductCard = (props) => {
         <h3 className="font-bold text-lg">{name}</h3>
         <h3 className="font-sans text-sm">{RupiahCurrency(price)}</h3>
       </div>
-      <div className="absolute bottom-0 p-4 group-hover:-translate-y-30 transition duration-300 flex justify-center w-full ">
+      <div
+        className="absolute bottom-0 p-4 group-hover:-translate-y-30 transition duration-300 flex justify-center w-full"
+        onClick={handleAddToCart}
+      >
         <button className="bg-my-brown cursor-pointer w-full py-4 px-8 text-xs text-white font-semibold font-sans rounded-xl hover:bg-my-brown/80">
           Tambahkan ke Keranjang
         </button>
@@ -53,7 +63,7 @@ export const FeaturedCard = (props) => {
   const { image, name, description } = props.data;
 
   return (
-    <div className="flex flex-col bg-white/50 backdrop-blur-md px-4 py-8 justify-center items-center gap-2 rounded-2xl">
+    <div className="flex flex-col  bg-white/50 backdrop-blur-md px-4 py-8 justify-center items-center gap-2 rounded-2xl">
       <span className="text-3xl">{image}</span>
       <h3 className="font-bold text-lg">{name}</h3>
       <p className="font-sans text-sm text-center">{description}</p>

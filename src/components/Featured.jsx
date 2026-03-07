@@ -5,21 +5,25 @@ import { FaShield } from "react-icons/fa6";
 
 const featuredList = [
   {
+    id: 1,
     image: <FaCar />,
     title: "Gratis Ongkir",
     description: "Gratis Ongkir untuk semua produk di Lumiere",
   },
   {
+    id: 2,
     image: <FaShield />,
     title: "Pembayaran Aman",
     description: "Pembayaran aman dan terpercaya",
   },
   {
+    id: 3,
     image: <FaShield />,
     title: "Pembayaran Aman",
     description: "Pembayaran aman dan terpercaya",
   },
   {
+    id: 4,
     image: <FaShield />,
     title: "Pembayaran Aman",
     description: "Pembayaran aman dan terpercaya",
