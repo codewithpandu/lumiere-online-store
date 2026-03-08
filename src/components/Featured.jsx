@@ -2,6 +2,8 @@ import React from "react";
 import { FeaturedCard } from "./ui/Card";
 import { FaCar } from "react-icons/fa";
 import { FaShield } from "react-icons/fa6";
+import { FaRotateLeft } from "react-icons/fa6";
+import { FaHeadphones } from "react-icons/fa6";
 
 const featuredList = [
   {
@@ -18,15 +20,15 @@ const featuredList = [
   },
   {
     id: 3,
-    image: <FaShield />,
-    title: "Pembayaran Aman",
-    description: "Pembayaran aman dan terpercaya",
+    image: <FaRotateLeft />,
+    title: "Mudah Dikembalikan",
+    description: "Pengembalian gratis dalam 30 hari jika tidak puas",
   },
   {
     id: 4,
-    image: <FaShield />,
-    title: "Pembayaran Aman",
-    description: "Pembayaran aman dan terpercaya",
+    image: <FaHeadphones />,
+    title: "Layanan 24/7",
+    description: "Tim support kami siap membantu kapan saja",
   },
 ];
 

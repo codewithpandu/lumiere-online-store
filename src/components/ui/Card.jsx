@@ -1,6 +1,5 @@
 import React from "react";
 import RupiahCurrency from "../../utils/RupiahCurrency";
-import { PrimaryButton } from "./Button";
 import { useDispatch } from "react-redux";
 import { addToCart } from "../../store/cart";
 import { Link } from "react-router-dom";

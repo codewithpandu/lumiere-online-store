@@ -1,7 +1,9 @@
 import { createSlice } from "@reduxjs/toolkit";
 
 const initialState = {
-  items: [],
+  items: localStorage.getItem("cart")
+    ? JSON.parse(localStorage.getItem("cart"))
+    : [],
   statusTab: false,
 };
 
@@ -20,6 +22,8 @@ const cartSlice = createSlice({
       } else {
         state.items.push({ productId, quantity });
       }
+
+      localStorage.setItem("cart", JSON.stringify(state.items));
     },
 
     changeQuantity: (state, action) => {
@@ -35,6 +39,8 @@ const cartSlice = createSlice({
           (item) => item.productId !== productId,
         );
       }
+
+      localStorage.setItem("quantity", JSON.stringify(state.items));
     },
 
     toggleStatusTab: (state) => {

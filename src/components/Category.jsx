@@ -1,6 +1,8 @@
 import React from "react";
 import Image2 from "../assets/img/pakaian-pria.jpg";
 import Image3 from "../assets/img/pakaian-wanita.jpg";
+import Image4 from "../assets/img/aksesoris.jpg";
+import Image5 from "../assets/img/tas.jpg";
 import { CategoryCard } from "./ui/Card";
 
 const categoryList = [
@@ -15,14 +17,14 @@ const categoryList = [
     image: Image3,
   },
   {
-    name: "Pakaian Wanita",
+    name: "Aksesoris",
     produk: 300,
-    image: Image3,
+    image: Image4,
   },
   {
-    name: "Pakaian Wanita",
+    name: "Tas & Sepatu",
     produk: 300,
-    image: Image3,
+    image: Image5,
   },
 ];
 
