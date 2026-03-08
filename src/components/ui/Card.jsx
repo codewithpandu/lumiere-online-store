@@ -3,6 +3,7 @@ import RupiahCurrency from "../../utils/RupiahCurrency";
 import { PrimaryButton } from "./Button";
 import { useDispatch } from "react-redux";
 import { addToCart } from "../../store/cart";
+import { Link } from "react-router-dom";
 
 export const CategoryCard = (props) => {
   const { name, produk, image } = props.data;
@@ -24,7 +25,7 @@ export const CategoryCard = (props) => {
 };
 
 export const ProductCard = (props) => {
-  const { id, name, image, price, rating, review } = props.data;
+  const { id, name, slug, image, price, rating, review } = props.data;
 
   const dispatch = useDispatch();
   const handleAddToCart = () => {
@@ -33,12 +34,14 @@ export const ProductCard = (props) => {
 
   return (
     <div className="relative w-full rounded-2xl overflow-hidden group">
-      <div className="w-full h-72 md:h-96 overflow-hidden">
-        <img
-          src={image}
-          alt={name}
-          className="h-full w-full object-cover object-top group-hover:scale-110 transition duration-300"
-        />
+      <div className="w-full h-56 md:h-96 overflow-hidden">
+        <Link to={`/product/${slug}`}>
+          <img
+            src={image}
+            alt={name}
+            className="h-full w-full object-cover object-top cursor-pointer group-hover:scale-110 transition duration-300"
+          />
+        </Link>
       </div>
       <div className="bg-secondary text-my-brown p-4 h-full relative z-10">
         <p className="font-sans text-sm">
@@ -48,7 +51,7 @@ export const ProductCard = (props) => {
         <h3 className="font-sans text-sm">{RupiahCurrency(price)}</h3>
       </div>
       <div
-        className="absolute bottom-0 p-4 group-hover:-translate-y-30 transition duration-300 flex justify-center w-full"
+        className="absolute bottom-0 p-4 -translate-y-30 md:translate-y-0 md:group-hover:-translate-y-30 transition duration-300 flex justify-center w-full"
         onClick={handleAddToCart}
       >
         <button className="bg-my-brown cursor-pointer w-full py-4 px-8 text-xs text-white font-semibold font-sans rounded-xl hover:bg-my-brown/80">

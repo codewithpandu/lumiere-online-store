@@ -6,17 +6,16 @@ import { ProductCard } from "../components/ui/Card";
 import { CartTab } from "../components/CartTab.jsx";
 const Product = () => {
   return (
-    <main className="relative">
+    <main>
       <div>
         <Header />
-        <div className="w-full md:w-7xl grid grid-cols-2 md:grid-cols-4 mx-auto gap-4 py-24 p-4">
+        <div className="md:max-w-7xl grid grid-cols-2 lg:grid-cols-3 mx-auto gap-4 py-24 p-4">
           {products.map((product, index) => (
             <ProductCard key={index} data={product} />
           ))}
         </div>
         <Footer />
       </div>
-      {/* <CartTab /> */}
     </main>
   );
 };

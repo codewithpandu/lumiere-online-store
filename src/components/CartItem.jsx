@@ -27,7 +27,7 @@ const CartItem = (props) => {
     dispatch(changeQuantity({ productId: productId, quantity: quantity + 1 }));
   };
   return (
-    <div className="flex justify-between text-secondary gap-4 p-2 items-center bg-secondary/30">
+    <div className="flex justify-between text-secondary gap-4 p-2 items-center bg-secondary/30 backdrop-blur-2xl">
       <img src={product.image} className="w-16 h-20" alt="" />
       <p className="font-sans">{product.name}</p>
       <p className="font-sans">{RupiahCurrency(product.price * quantity)}</p>

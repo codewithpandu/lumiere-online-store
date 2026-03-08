@@ -1,6 +1,7 @@
 import React from "react";
 import { ProductCard } from "./ui/Card";
 import { products } from "../products";
+import { Link } from "react-router-dom";
 
 const FeaturedProduct = () => {
   return (
