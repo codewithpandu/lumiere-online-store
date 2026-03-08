@@ -64,7 +64,7 @@ const DetailProduct = () => {
   return (
     <main>
       <Header />
-      <div className="body-font overflow-hidden md:max-w-7xl mx-auto px-4 py-24">
+      <div className="body-font overflow-hidden md:max-w-7xl mx-auto px-4 py-28">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
           <img
             alt={detail.name}
@@ -84,7 +84,7 @@ const DetailProduct = () => {
                   </span>
                 </span>
               </div>
-              <p className="leading-relaxed">{detail.description}</p>
+              <p className="leading-relaxed font-sans">{detail.description}</p>
             </div>
             <div className="flex gap-2 items-center mt-8 justify-between">
               <div className="flex gap-2 items-center">
