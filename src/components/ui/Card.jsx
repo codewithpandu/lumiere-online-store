@@ -53,7 +53,7 @@ export const ProductCard = (props) => {
         className="absolute bottom-0 p-4 -translate-y-30 md:translate-y-0 md:group-hover:-translate-y-30 transition duration-300 flex justify-center w-full"
         onClick={handleAddToCart}
       >
-        <button className="bg-my-brown cursor-pointer w-full py-4 px-8 text-xs text-white font-semibold font-sans rounded-xl hover:bg-my-brown/80">
+        <button className="bg-my-brown cursor-pointer w-full px-2 py-4 md:py-2 md:px-8 text-xs text-white font-semibold font-sans rounded-xl hover:bg-my-brown/80">
           Tambahkan ke Keranjang
         </button>
       </div>

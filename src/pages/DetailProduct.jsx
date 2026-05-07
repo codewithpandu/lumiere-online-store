@@ -2,21 +2,27 @@ import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { products } from "../products";
 import { useDispatch } from "react-redux";
-import { addToCart, changeQuantity } from "../store/cart";
+import { addToCart } from "../store/cart";
 import { PrimaryButton } from "../components/ui/Button";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
+import { useLocation } from "react-router-dom";
 
 const DetailProduct = () => {
   const { slug } = useParams();
   const [detail, setDetail] = useState({});
   const dispatch = useDispatch();
   const [quantity, setQuantity] = useState(1);
+  const location = useLocation();
 
   useEffect(() => {
     const getProduct = products.filter((product) => product.slug === slug);
     setDetail(getProduct[0]);
   });
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [location.pathname]);
 
   const findProducts = products.find((product) => product.slug === slug);
 
